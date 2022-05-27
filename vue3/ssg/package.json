@@ -1,0 +1,37 @@
+{
+  "name": "vue3-ssg",
+  "version": "1.0.0",
+  "description": "Static Site Generator - Vue 3 App",
+  "scripts": {
+    "bundle:client": "webpack --config webpack.client.config.js",
+    "bundle:server": "webpack --config webpack.server.config.js",
+    "bundle": "yarn bundle:client && yarn bundle:server",
+    "render": "node src/prerender.js",
+    "build": "yarn bundle && yarn render",
+    "start": "serve -s dist"
+  },
+  "keywords": [
+    "Vue 3",
+    "SSG"
+  ],
+  "author": "Mateusz Matysiak",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/node": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "babel-loader": "^8.2.5",
+    "css-loader": "^6.7.1",
+    "css-minimizer-webpack-plugin": "^3.4.1",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "serve": "^13.0.2",
+    "vue-loader": "^17.0.0",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-node-externals": "^3.0.0"
+  }
+}

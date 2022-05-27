@@ -1,0 +1,32 @@
+{
+  "name": "vue2-csr",
+  "version": "1.0.0",
+  "description": "Client Side Rendering - Vue 2 App",
+  "scripts": {
+    "build": "webpack",
+    "start": "serve -s dist"
+  },
+  "keywords": [
+    "Vue 2",
+    "CSR"
+  ],
+  "author": "Mateusz Matysiak",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^2.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "babel-loader": "^8.2.5",
+    "css-loader": "^6.7.1",
+    "css-minimizer-webpack-plugin": "^3.4.1",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "serve": "^13.0.2",
+    "vue-loader": "^15.0.0",
+    "vue-template-compiler": "^2.6.14",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
+  }
+}
