@@ -1,4 +1,4 @@
-export const ELEMENTS = 12000;
+export const ELEMENTS = 24000;
 
 export const data = {
   listItems: new Array(ELEMENTS / 3).fill(null).map((_, index) => ({
