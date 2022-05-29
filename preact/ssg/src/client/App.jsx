@@ -7,6 +7,7 @@ import List from "./components/List";
 import ListItem from "./components/ListItem";
 import Main from "./components/Main";
 import Table from "./components/Table";
+const { h } = require("preact");
 
 function App() {
   return (

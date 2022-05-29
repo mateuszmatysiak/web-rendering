@@ -12,7 +12,7 @@ import Table from "./components/Table";
 function App() {
   return (
     <Main>
-      <Header name="React 17" renderType="SSg" numberOfElements={ELEMENTS} />
+      <Header name="React 17" renderType="SSG" numberOfElements={ELEMENTS} />
 
       <Grid>
         {data.counters.map((counter) => (

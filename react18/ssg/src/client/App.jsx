@@ -1,5 +1,5 @@
 import React from "react";
-import { data, ELEMENTS } from "../../../config";
+import { data, ELEMENTS } from "../../../../config";
 import Counter from "./components/Counter";
 import Footer from "./components/Footer";
 import Grid from "./components/Grid";
@@ -12,7 +12,7 @@ import Table from "./components/Table";
 function App() {
   return (
     <Main>
-      <Header name="React 18" renderType="SSg" numberOfElements={ELEMENTS} />
+      <Header name="React 18" renderType="SSG" numberOfElements={ELEMENTS} />
 
       <Grid>
         {data.counters.map((counter) => (
