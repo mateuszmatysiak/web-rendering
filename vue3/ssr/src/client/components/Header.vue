@@ -1,9 +1,3 @@
-<script>
-export default {
-  props: ["name", "renderType", "numberOfElements"],
-};
-</script>
-
 <template>
   <header class="header">
     <h1 class="header-name">
@@ -15,3 +9,9 @@ export default {
     </p>
   </header>
 </template>
+
+<script>
+export default {
+  props: ["name", "renderType", "numberOfElements"],
+};
+</script>

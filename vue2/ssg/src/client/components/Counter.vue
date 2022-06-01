@@ -10,7 +10,7 @@ export default {
 
 <template>
   <button class="counter" @click="count++">
-    <span><slot /></span>
-    <span>{{ `[${count}]` }}</span>
+    <p><slot /></p>
+    <strong>{{ count }}</strong>
   </button>
 </template>

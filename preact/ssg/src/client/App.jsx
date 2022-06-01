@@ -7,26 +7,28 @@ import List from "./components/List";
 import ListItem from "./components/ListItem";
 import Main from "./components/Main";
 import Table from "./components/Table";
-const { h } = require("preact");
+import { h } from "preact";
 
 function App() {
   return (
     <Main>
       <Header name="Preact" renderType="SSG" numberOfElements={ELEMENTS} />
 
-      <Grid>
-        {data.counters.map((counter) => (
-          <Counter key={counter.id}>{counter.name}</Counter>
-        ))}
-      </Grid>
+      <div className="grid" style={{ gridTemplateColumns: "repeat(3, 1fr)" }}>
+        <Grid>
+          {data.counters.map((counter) => (
+            <Counter key={counter.id}>{counter.name}</Counter>
+          ))}
+        </Grid>
 
-      <Table tableRows={data.tableRows} />
+        <Table tableRows={data.tableRows} />
 
-      <List>
-        {data.listItems.map((item) => (
-          <ListItem key={item.id}>{item.name}</ListItem>
-        ))}
-      </List>
+        <List>
+          {data.listItems.map((item) => (
+            <ListItem key={item.id}>{item.name}</ListItem>
+          ))}
+        </List>
+      </div>
 
       <Footer name="Preact SSG" />
     </Main>

@@ -6,8 +6,8 @@ const Counter = ({ children }) => {
 
   return (
     <button className="counter" onClick={() => setCount(count + 1)}>
-      <span>{children}</span>
-      <span>{`[${count}]`}</span>
+      <p>{children}</p>
+      <strong>{count}</strong>
     </button>
   );
 };

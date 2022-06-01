@@ -36,19 +36,21 @@ export default {
   <Main>
     <Header :name="'Vue 2'" :renderType="'CSR'" :numberOfElements="ELEMENTS" />
 
-    <Grid>
-      <Counter v-for="counter in counters" :key="counter.id">
-        {{ counter.name }}
-      </Counter>
-    </Grid>
+    <div class="grid" style="grid-template-columns: repeat(3, 1fr)">
+      <Grid>
+        <Counter v-for="counter in counters" :key="counter.id">
+          {{ counter.name }}
+        </Counter>
+      </Grid>
 
-    <Table :tableRows="tableRows" />
+      <Table :tableRows="tableRows" />
 
-    <List>
-      <ListItem v-for="item in listItems" :key="item.id">
-        {{ item.name }}
-      </ListItem>
-    </List>
+      <List>
+        <ListItem v-for="item in listItems" :key="item.id">
+          {{ item.name }}
+        </ListItem>
+      </List>
+    </div>
 
     <Footer name="Vue 2 CSR" />
   </Main>

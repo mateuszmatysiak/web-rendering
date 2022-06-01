@@ -1,7 +1,7 @@
 import { h } from "preact";
 
 const Main = ({ children }) => {
-  return <main>{children}</main>;
+  return <main className="grid">{children}</main>;
 };
 
 export default Main;

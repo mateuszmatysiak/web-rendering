@@ -1,3 +1,27 @@
+<template>
+  <Main>
+    <Header :name="'Vue 3'" :renderType="'CSR'" :numberOfElements="ELEMENTS" />
+
+    <div class="grid" style="grid-template-columns: repeat(3, 1fr)">
+      <Grid>
+        <Counter v-for="counter in counters" :key="counter.id">
+          {{ counter.name }}
+        </Counter>
+      </Grid>
+
+      <Table :tableRows="tableRows" />
+
+      <List>
+        <ListItem v-for="item in listItems" :key="item.id">
+          {{ item.name }}
+        </ListItem>
+      </List>
+    </div>
+
+    <Footer name="Vue 3 CSR" />
+  </Main>
+</template>
+
 <script>
 import { data, ELEMENTS } from "../../../config";
 import Counter from "./components/Counter.vue";
@@ -31,25 +55,3 @@ export default {
   },
 };
 </script>
-
-<template>
-  <Main>
-    <Header :name="'Vue 3'" :renderType="'CSR'" :numberOfElements="ELEMENTS" />
-
-    <Grid>
-      <Counter v-for="counter in counters" :key="counter.id">
-        {{ counter.name }}
-      </Counter>
-    </Grid>
-
-    <Table :tableRows="tableRows" />
-
-    <List>
-      <ListItem v-for="item in listItems" :key="item.id">
-        {{ item.name }}
-      </ListItem>
-    </List>
-
-    <Footer name="Vue 3 CSR" />
-  </Main>
-</template>

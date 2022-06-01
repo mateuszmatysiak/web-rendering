@@ -1,3 +1,10 @@
+<template>
+  <button class="counter" @click="count++">
+    <p><slot /></p>
+    <strong>{{ count }}</strong>
+  </button>
+</template>
+
 <script>
 export default {
   data() {
@@ -7,10 +14,3 @@ export default {
   },
 };
 </script>
-
-<template>
-  <button class="counter" @click="count++">
-    <span><slot /></span>
-    <span>{{ `[${count}]` }}</span>
-  </button>
-</template>

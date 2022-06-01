@@ -14,19 +14,21 @@ function App() {
     <Main>
       <Header name="React 17" renderType="SSG" numberOfElements={ELEMENTS} />
 
-      <Grid>
-        {data.counters.map((counter) => (
-          <Counter key={counter.id}>{counter.name}</Counter>
-        ))}
-      </Grid>
+      <div className="grid" style={{ gridTemplateColumns: "repeat(3, 1fr)" }}>
+        <Grid>
+          {data.counters.map((counter) => (
+            <Counter key={counter.id}>{counter.name}</Counter>
+          ))}
+        </Grid>
 
-      <Table tableRows={data.tableRows} />
+        <Table tableRows={data.tableRows} />
 
-      <List>
-        {data.listItems.map((item) => (
-          <ListItem key={item.id}>{item.name}</ListItem>
-        ))}
-      </List>
+        <List>
+          {data.listItems.map((item) => (
+            <ListItem key={item.id}>{item.name}</ListItem>
+          ))}
+        </List>
+      </div>
 
       <Footer name="React 17 SSG" />
     </Main>

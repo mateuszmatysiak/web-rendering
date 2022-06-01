@@ -3,22 +3,19 @@ import React from "react";
 const Table = ({ tableRows }) => {
   return (
     <table>
-      <thead>
-        <tr>
-          <th>Kolumna 1</th>
-          <th>Kolumna 2</th>
-          <th>Kolumna 3</th>
+      <tr>
+        <th>Kolumna 1</th>
+        <th>Kolumna 2</th>
+        <th>Kolumna 3</th>
+      </tr>
+
+      {tableRows.map((row) => (
+        <tr key={row.id}>
+          <td>{row.name}</td>
+          <td>{row.name}</td>
+          <td>{row.name}</td>
         </tr>
-      </thead>
-      <tbody>
-        {tableRows.map((row) => (
-          <tr key={row.id}>
-            <th>{row.name}</th>
-            <th>{row.name}</th>
-            <th>{row.name}</th>
-          </tr>
-        ))}
-      </tbody>
+      ))}
     </table>
   );
 };

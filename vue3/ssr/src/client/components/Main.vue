@@ -1,3 +1,3 @@
 <template>
-  <main><slot /></main>
+  <main class="grid"><slot /></main>
 </template>
